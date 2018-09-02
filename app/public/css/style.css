@@ -1,0 +1,19 @@
+.container{
+    background-color: rgb(241, 240, 237);
+}
+h3{
+    color:rgb(18, 150, 150);
+}
+.option{
+    width: 200px;
+}
+h2{
+    color:rgb(12, 95, 116);
+}
+.container1{
+    width : 60%;
+}
+.container2{
+    width : 40%;
+    padding:  30px;
+}

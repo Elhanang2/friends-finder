@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Servey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+   .container{
+    background-color: rgb(241, 240, 237);
+    }
+    h4{
+        color:rgb(18, 150, 150);
+    }
+    .option{
+        width: 200px;
+    }
+    h2{
+        color:rgb(12, 95, 116);
+    }
+    .container1{
+        float: left;
+        /* width : 60%; */
+    }
+    .container2{
+        float: left;
+        /* width : 40%; */
+        padding:  30px;
+    }
+
+    #submit{
+        background-color: rgb(109, 185, 204);
+    }
+    .footer{
+        margin-left: 80px;
+        
+        display: inline-block;
+    }
+    .link{
+        list-style: none;
+        display: block;
+        display: flex;
+    }
+    .link a {
+        text-decoration: none;
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1 col-6">
+            <div class="row">
+                <h2>Servey Questions</h2>
+            </div>
+            <hr class="my-4">
+            <form>
+                <div>
+                    <h4><b>About You</b></h4>
+                    <div class="form-group">
+                            <label for="name"><h5>Name (Required)</h5></label>
+                            <input type="text" class="form-control" id="name"  placeholder="name">
+                            
+                    </div>
+                    <div class="form-group">
+                            <label for="linktophoto"><h5>Link to Photo Image (Required)</h5></label>
+                            <input type="text" class="form-control"  id="linktophoto" >
+                            
+                    </div>
+                </div>
+            </form>
+            <hr class="my-4">
+            <form>
+                <div class="form-group  question1">
+                    <h4>Question 1</h4>
+                    <h5>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </div>
+                <div class="form-group answer1">
+                    <!-- <label for="exampleFormControlSelect1">Select an Option</label> -->
+                    <select class="form-control option" id="exampleFormControlSelect1">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1(Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group question2">
+                    <h4>Question 2</h4>
+                    <h5>Generally speaking, you rely more on your experience than your imagination.
+                        </h5>
+                    </div>
+                    <div class="form-group answer2">
+                    <!-- <label for="exampleFormControlSelect1">Select an Option</label> -->
+                    <select class="form-control option" id="exampleFormControlSelect2">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1(Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="form-group question3">
+                    <h4>Question 2</h4>
+                    <h5>Generally speaking, you rely more on your experience than your imagination.
+                        </h5>
+                    </div>
+                    <div class="form-group answer3">
+                    <!-- <label for="exampleFormControlSelect1">Select an Option</label> -->
+                    <select class="form-control option " id="exampleFormControlSelect3">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1(Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="form-group question4">
+                    <h4>Question 3</h4>
+                    <h5>You rarely do something just out of sheer curiosity.
+
+                        </h5>
+                    </div>
+                    <div class="form-group answer4">
+                    <!-- <label for="exampleFormControlSelect1">Select an Option</label> -->
+                    <select class="form-control option" id="exampleFormControlSelect4">
+                        <option value="" disabled selected>Select an Option</option>
+                        <option value="1">1(Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                </div>
+            </form>
+
+            <button id= "submit">submit</button>
+            
+
+        </div>
+        <div class="container2 col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Friends Match With You</h2>
+                </div>
+                <div class="card-body">
+                   
+                    <h5 id="friendsMatchName"></h5>
+			        <img id="friendsMatchImage" class="materialboxed" width="200"  src="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul class="link">
+        <li><a  href = "/"><h5>Home  |  </h5></a> </li>
+        <li><a  href = "api/friends"><h5>Api friends list link</h5></a></li> 
+        </ul>
+    </div>
+    
+    
+</body>
+<script type= "text/javascript">
+    //if submit click get all user input and assign to a variable
+    $("#submit").on("click",function(event){
+        event.preventDefault();
+        var scoreinput1=$("#exampleFormControlSelect1").val().trim();
+        var scoreinput2=$("#exampleFormControlSelect2").val().trim();
+        var scoreinput3=$("#exampleFormControlSelect3").val().trim();
+        var scoreinput4=$("#exampleFormControlSelect4").val().trim();
+        //user input 
+        var newfriendreqiest={
+            name : $("#name").val().trim(),
+            Photo :$("#linktophoto").val().trim(),
+            scores :[
+                scoreinput1,
+                scoreinput2,
+                scoreinput3,
+                scoreinput4
+            ]
+        };
+
+        // console.log("newfriendrequest : "+ JSON.stringify(newfriendreqiest));
+        //add newfriendrequest to the server
+        $.post("/api/friends",newfriendreqiest , function(data){
+            
+            $("#friendsMatchName").html("Name : "+ data.friendsMatchName),
+            $("#friendsMatchImage").attr("src", data.friendsMatchImage)
+            
+            console.log("result data : "+ JSON.stringify(data.name))
+        
+        });
+        
+    });
+    
+</script>
+</html>
