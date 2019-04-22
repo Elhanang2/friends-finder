@@ -1,16 +1,20 @@
-//Dependencies
-var path = require("path");
+
+// We are linking our routes to a series of "data" sources.
+// These data sources hold arrays of information on all possible friends
 var friends = require("../data/friends.js");
-//Routes
+//Routing
 module.exports = function(app){
-    //Get frends list
+    //API Get Request 
     app.get("/api/friends", function(req, res){
         res.json(friends);
     });
+    //API POST Requests
+    // Below code handles when a user submits a form and thus submits data to the server.
     //Add friend
     app.post("/api/friends", function(req, res){
         //user input captured
         var userinput = req.body;
+        console.log("userinput: "+ userinput);
         console.log("user input : "+ JSON.stringify(userinput.scores)); 
         //variable declaration and initialization
         var friendsMatchName="";
@@ -36,7 +40,7 @@ module.exports = function(app){
             //absolute value of difference 
             var diff =Math.abs(friendsTotalScore-userinputTotalscore);
             console.log("diff : "+diff);
-                //compare difference with initial value and assign to variavles
+                //compare difference with initial value and assign to variales
                 if(diff < totaldifference){
                     totaldifference=diff;
                     friendsMatchName=friends[i].name;
@@ -45,7 +49,9 @@ module.exports = function(app){
         }
         console.log("friendsMatchName:"+friendsMatchName);
         console.log("friendsMatchImage: "+friendsMatchImage);
+        // Finally save the user's data to the database
         friends.push(userinput);
+        // Return a JSON with the user's bestMatch.
         res.json({friendsMatchName:friendsMatchName,
                 friendsMatchImage:friendsMatchImage}); 
     });
