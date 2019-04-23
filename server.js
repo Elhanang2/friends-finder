@@ -6,7 +6,9 @@ var path = require("path");
 
 // Sets up the Express App
 var app = express();
-var port = 8080;
+// Sets an initial port. We"ll use this later in our listener
+var PORT = process.env.PORT || 8080;
+
 
 var friend = require("./app/data/friends.js");
 
@@ -20,6 +22,6 @@ require("./app/routing/htmlRoutes")(app);
 
  
 //The server start listening
-app.listen(port,function(){
-    console.log("you are connected to port :"+port);
+app.listen(PORT,function(){
+    console.log("you are connected to port :"+PORT);
 });

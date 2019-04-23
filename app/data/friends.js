@@ -1,5 +1,5 @@
 //array of stored freinds list
-var questionarray= [{
+var friends= [{
     name : "Ahmed",
     photo :  "https://thumb9.shutterstock.com/display_pic_with_logo/2449829/687438982/stock-vector-beach-cheerful-seamless-pattern-wallpaper-of-tropical-dark-green-leaves-of-palm-trees-and-flowers-687438982.jpg",
     
@@ -14,4 +14,4 @@ var questionarray= [{
     scores : [3,5,5,5]
 }];
 
-module.exports =questionarray;
+module.exports =friends;

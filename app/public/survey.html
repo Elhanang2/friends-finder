@@ -154,7 +154,7 @@
                 </div>
                 <div class="modal-body">
                 <h2 id="match-name"></h2>
-                <img id="match-img" src="https://image.shutterstock.com/image-vector/blank-avatar-photo-place-holder-450w-1114445501.jpg" alt="">
+                <img id="match-img" src="http://lorempixel.com/400/200/" alt="">
                 </div>
                 <div class="modal-footer">
                 <button class="btn btn-default" data-dismiss="modal">Close</button>
@@ -173,13 +173,7 @@
     //if submit click get all user input and assign to a variable
     $("#submit").on("click",function(event){
         event.preventDefault();
-        var scoreinput1=$("#selection-1").val();
-        var scoreinput2=$("#selection-2").val();
-        var scoreinput3=$("#selection-3").val();
-        var scoreinput4=$("#selection-4").val();
-        var photo=$("#linktophoto").html();
-        var name= $("#name").val();
-        
+                        
         //Form Validation
         function validateForm() {
         var isValid = true;
@@ -194,21 +188,27 @@
       }
       if(validateForm()){
         //user input 
-        var newfriendreqiest={
-            name : name,
-            Photo : photo,
+        var userInput={
+            name : $("#name").val(),
+            Photo : $("#linktophoto").val(),
             scores :[
-                scoreinput1,
-                scoreinput2,
-                scoreinput3,
-                scoreinput4
+            $("#selection-1").val(),
+            $("#selection-2").val(),
+            $("#selection-3").val(),
+            $("#selection-4").val()
             ]
         };
+            $("#name").val(""),
+            $("#linktophoto").val(""),
+            $("#selection-1").val(""),
+            $("#selection-2").val(""),
+            $("#selection-3").val(""),
+            $("#selection-4").val("")
         
-        $.post("/api/friends",newfriendreqiest , function(data){
-            
-            $("#match-name").text("Name : "+ data.friendsMatchName),
-            $("#match-img").attr("src", data.friendsMatchImage)
+        $.post("/api/friends", userInput , function(data){
+            console.log("ttttttttttttttt"+data.photo)
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
             //show the modal with best match
             $("#results-modal").modal("toggle");
             console.log("result data : "+ JSON.stringify(data.name))

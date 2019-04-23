@@ -5,7 +5,7 @@ var path = require("path");
 module.exports = function(app){
     // Basic route that sends the user first to the AJAX Page
     app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "/../public/home.html"));
+        res.sendFile(path.join(__dirname, "../public/home.html"));
     });
   
   
@@ -13,6 +13,6 @@ module.exports = function(app){
     // Below code handles when users "visit" a page.
     // In each of the below cases the user is shown an HTML page of content
     app.get("/survey", function(req, res) {
-        res.sendFile(path.join(__dirname, "/../public/survey.html"));
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 }; 
