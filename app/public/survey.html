@@ -7,28 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link href="https://fonts.googleapis.com/css?family=Arimo|Jaldi|Prompt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
     body{
-        font-family: 'Arimo', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
     .container1{
         font-size: 18px;
-        background-color: rgb(241, 225, 150);
+        background-color: rgb(253, 251, 235);
+       
         padding: 40px;
+    }
+    .title-header{
+        height: 50vh;
+        /* background-image: url("./images/friendsbackground.jpg"); */
+        background: linear-gradient(rgba(50,50,25,0.4), rgba(5,5,25,0.5)), url("./images/friendsbackground.jpg");
+        background-size: cover;
+        margin: auto;
+        position: relative;
+    }
+    .title-header h2{
+        font-size: 40px;
     }
     .row{
         text-align: center;
+        position: relative;
+        top: 30%;
+        color:rgb(218, 246, 250);
+        
     }
     h2,h3{
         font-family: 'Jaldi', serif;
     }
-    h2{
-        color: brown;
-    }
+    
     h4, .select-container{
         text-indent: 20px;
     }
@@ -36,9 +50,15 @@
        padding: 5px;
        
    }
-   button{
+   .btn{
        margin-left: 20px;
-       background-color: rgb(241, 198, 79);
+       background-color: rgb(96, 205, 248);
+       font-weight: bold;
+       font-size: 20px;
+   }
+   .btn:hover{
+       font-size:22px;
+       color: rgb(91, 91, 92);
    }
    p{
        padding: 10px;
@@ -52,9 +72,12 @@
 <body>
     <div class="container">
         <div class="container1 col-6">
-            <div class="row">
-                <h2><b>Servey Questions</b></h2>
+            <div class="title-header">
+                <div class="row">
+                    <h2><b>Servey Questions</b></h2>
+                </div>
             </div>
+            
             <hr class="my-4">
             <form>
                 <div>
@@ -142,7 +165,7 @@
                 </div>
             </form>
 
-            <button id= "submit" class="btn  btn-lg ">submit</button>
+            <button id= "submit" class="btn  btn-lg ">Submit</button>
             <hr>
             
 
