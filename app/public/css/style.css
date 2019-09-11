@@ -1,60 +1,77 @@
-body{
+body {
     font-family: 'Arimo', sans-serif;
 }
 
-    h3{
-        color:rgb(18, 150, 150);
-    }
-    .option{
-        width: 200px;
-    }
-    h1,h2{
-        color:rgb(12, 95, 116);
-        font-family: 'Prompt', serif;
-        
-    }
-    p{
-        font-size: 16px;
-    }
-    .jumbotron{
-        background-color: rgb(248, 233, 205);
-    }
- #home{
-        margin-left: 100px;
-    }
-.container{
-    background-color: rgb(241, 240, 237);
+h3 {
+    color: rgb(18, 150, 150);
 }
-h3{
-    color:rgb(18, 150, 150);
-}
-.option{
+
+.option {
     width: 200px;
 }
-.container1{
-    width : 60%;
+
+h1,
+h2 {
+    color: rgb(12, 95, 116);
+    font-family: 'Prompt', serif;
 }
-.container2{
-    width : 40%;
-    padding:  30px;
+
+p {
+    font-size: 16px;
 }
-.carousel-item img{
-    height: 500px;
+
+.jumbotron {
+    background-color: rgb(248, 233, 205);
 }
-.carousel-caption h1{
+
+#home {
+    margin-left: 100px;
+}
+
+.container {
+    background-color: rgb(241, 240, 237);
+}
+
+h3 {
+    color: rgb(18, 150, 150);
+}
+
+.option {
+    width: 200px;
+}
+
+.container1 {
+    width: 60%;
+}
+
+.container2 {
+    width: 40%;
+    padding: 30px;
+}
+
+.carousel-item img {
+    height: 50vh;
+    background-size: cover;
+}
+
+.carousel-caption h1 {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 2px black;
 }
+
 .carousel-caption {
     position: absolute;
     z-index: 1;
     margin: auto;
-    /* display:table; */
-    top: 40%;
-    /* left: -50%; */
-    /* vertical-align: middle; */
-    text-align:center;
-    /* width:100%; */
-    /* height:100%; */
+    top: 26%;
+    text-align: center;
+}
+@media only screen and (max-width: 540px){
+    .carousel-caption {
+        top: 20%;
+    }
+    .carousel-caption h1 {
+        font-size: 45px;
+    }
 }
